@@ -46,12 +46,13 @@ print(name)
 
 # static vs dynamic typing
 # don't have to tell the data type while creating a Variable, cause it python and interpreter can understand :)
-a =5 # rather than int a =5 (static typing)C,JAVA,C++
+a =5
+# rather than int a =5 (static typing)C,JAVA,C++
 
 # Dynamic Binding
 a = 5
 print(a)
-a = 'nitish'
+a = 'Masao'
 print(a)
 #notice no error cause python support dynamic binding i.e variable can hold any data type
 
@@ -62,3 +63,33 @@ print(a,b,c)
 
 x=y=z = 5
 print(x,y,z)
+
+#Keywords
+#Python keywords are reserved words that have predefined meanings and functions within the language.
+
+#identifier
+#Identifiers in Python are names used to identify a variable, function, class, module, or other object. They are essential for giving names to objects so that they can be referenced and manipulated within the code
+#Rules for creating identifiers
+# You can't start with a digit i.e 1print
+# You can use special chars -> _ i.e first_name not first-name
+# identifiers cannot be keywords
+
+#User input
+# Static vs Dynamic
+Name=input("What's your character?")
+print("Well "+Name+" let's add 2 numbers")
+
+#take input from users and store them in variable
+#input takes by default string
+fnum = float(input("Enter first number:")) #Type conversion
+snum = float(input("Enter second number:")) #explicit
+#add the 2 variables
+result = fnum+snum
+#print the result
+print(result)
+
+# Type conversion
+#Implicit vs explicit
+print(5+5.6) #INTERPRETER auto converts
+print(type(5),type(5.6))
+
