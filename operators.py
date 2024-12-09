@@ -1,4 +1,4 @@
-#Operators
+ #Operators
 
 #Arithmetic
 print(5+6)
