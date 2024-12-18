@@ -1,4 +1,6 @@
 # num = int(input("Enter number: "))
+from time import perf_counter
+
 
 def is_even(i):# the i is parameter
     """checking if the number entered is
@@ -102,3 +104,78 @@ def f():
     print('inside function f')
 
 f()
+
+# def f():
+#     def g():
+#         print('inside the function g')
+#     g()
+#     print('inside function f')
+# infinite loop
+
+def g(x):
+    def h():
+        x='abc'
+    x=x+1
+    print('in g(x):x=',x)
+    h()
+    return x
+x= 3
+z=g(x)
+
+def g(x):
+    def h(x):
+        x=x+1
+        print("in h(x): x = ", x)
+    x = x+1
+    print('in g(x): x = ', x)
+    h(x)
+    return x
+
+x=3
+z=g(x)
+print('in main program scope: x = ',x)
+print('in main program scope: z = ',z)
+
+# functions in python are first class citizens along with data types
+
+# type and id
+def square(num):
+  return num**2
+
+print(type(square))
+print(id(square))
+
+# reassign
+x = square
+x(9)
+print(x(9))
+print(id(x))
+
+# deleting a function
+del square
+
+def square(num):
+  return num**2
+
+# storing a function
+L = [1,2,3,square]
+
+# returning a function
+def f():
+    def x(a=1,b=1):
+        return a+b
+    return x
+
+val= f()(3,4)
+print(val)
+
+# function as argument
+
+def func_a():
+    print('inside func_a')
+
+def func_b(z):
+    print('inside func_b')
+    return z()
+
+print(func_b(func_a)) 
