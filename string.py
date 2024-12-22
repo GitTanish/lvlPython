@@ -127,3 +127,4 @@ print('hi my name is nitish'.replace('nitish','campusx'))
 
 # strip
 print('rest                   '.strip())
+# The strip method removes leading and trailing characters, not characters in the middle of the string
