@@ -3,20 +3,47 @@
 # inside tkinter we have 2 kinds of widgets :- tk widgets were the original and ttk widgets were added later on
 # ttk is much more modern
 import tkinter as tk
-from tkinter import ttk
+# from tkinter import ttk
+import ttkbootstrap as ttk
+
+def button_function():
+    print('A button was pressed')
+
+def func_2():
+    print('Button B')
 
 # create a window
-window = tk.Tk()
-window.title('Window and Widgets')
+window = ttk.Window(themename = 'darkly' )
+window.title('Window and Widgets - Practice')
 window.geometry('800x500') # widthxheight
+
+# ttk LABEL
+label = ttk.Label(master = window, text = 'This is a test')
+label.pack()
+
+label_1 = ttk.Label(master = window, text = 'Demonstration of label')
+label_1.pack()
 
 # create widgets
 text =tk.Text(master = window) # this is child of the window
 text.pack()
 
-# ttk widgets
-label = ttk.Label(master = window, text = 'This is a test')
-label.pack()
+wid_2 = tk.Text(master = window) 
+
+
+# ttk entry
+entry = ttk.Entry(master = window)
+entry.pack()
+
+entry_2 = ttk.Entry(master = window)
+entry_2.pack()
+
+# ttk button
+button = ttk.Button(master = window, text = 'A button', command = button_function)
+button.pack()
+
+button_1 = ttk.Button(master = window, text = 'B button', command = func_2)
+button_1.pack()
 
 # run
 window.mainloop() # run tills closing the application
