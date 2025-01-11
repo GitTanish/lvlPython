@@ -11,7 +11,7 @@ def convert():
 
 # window
 #window = tk.Tk()
-window = ttk.Window(themename = 'darkly ')
+window = ttk.Window(themename = 'darkly')
 window.title('Demo')
 window.geometry('360x360') # (widthxheight)
 
