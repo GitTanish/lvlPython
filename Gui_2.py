@@ -12,6 +12,9 @@ def button_function():
 def func_2():
     print('Button B')
 
+def exercise_button_func():
+    print('H3LL0')
+
 # create a window
 window = ttk.Window(themename = 'darkly' )
 window.title('Window and Widgets - Practice')
@@ -44,6 +47,14 @@ button.pack()
 
 button_1 = ttk.Button(master = window, text = 'B button', command = func_2)
 button_1.pack()
+
+# exercise
+# add one more text label and a button with a fucntion that prints 'hello
+# the label should say 'my label' and be between the entry widget and the button
+
+# exercise_button = ttk.Button(master = window, text = 'exercise button', command = exercise_button_func)
+exercise_button = ttk.Button(master = window, text = 'exercise button', command = lambda : print('H3LL0'))
+exercise_button.pack()
 
 # run
 window.mainloop() # run tills closing the application
