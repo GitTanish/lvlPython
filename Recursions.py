@@ -17,3 +17,27 @@ def mul(a,b):
         return a+ mul(a,b-1)
 
 print(mul(3,4))
+# recursion uses stack and the return value goes from bottom to top
+
+# factorial
+def fact(number):
+    if number == 1:
+        return 1
+    else:
+        # 5! = 5*4!
+        return number * fact(number -1)
+
+print(fact(5))
+
+# palindrome
+def palin(text):
+    if len(text)<=1:
+        print('palindrome')
+    else:
+        if text[0] == text[-1]:
+            palin(text[1:-1])
+        else:
+            print('Not a palindrome')
+
+palin('malayalam')
+palin('abba')
