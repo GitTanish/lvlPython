@@ -1,0 +1,19 @@
+# Ignore Python bytecode files
+*.pyc
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore specific files
+Gui_1.py
+for.py
+batsman_runs_ipl.csv
+bollywood.csv
+diabetes.csv
+imdb.csv
+ipl-matches.csv
+kohli_ipl.csv
+movies.csv
+subs.csv
+git add .gitignore
+git commit -m "Add .gitignore file"
