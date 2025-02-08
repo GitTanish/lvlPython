@@ -1,6 +1,6 @@
 import tkinter as tk
-# from tkinter import ttk
-# now since our converter is functional, let's make it beautiful
+#from tkinter import ttk
+# # now since our converter is functional, let's make it beautiful
 import ttkbootstrap as ttk
 
 def convert():
@@ -10,7 +10,7 @@ def convert():
     output_string.set(result)
 
 # window
-#window = tk.Tk()
+# window = tk.Tk()
 window = ttk.Window(themename = 'darkly')
 window.title('Demo')
 window.geometry('360x360') # (widthxheight)
